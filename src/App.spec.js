@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
 describe("App rendering and functionality",()=>{
-  it("should display an X",()=>{
+  test("should display an X",()=>{
       render(<App/>);
       const gameBoard=screen.getByTestId("gameBoard");
       expect(gameBoard).not.toBeNull();
