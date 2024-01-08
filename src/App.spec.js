@@ -44,7 +44,7 @@ describe("App rendering and functionality",()=>{
     expect(Square[1].textContent).toBe("O");
   });
 
-  test("should display token on the squae only when it is empty",()=>{
+  test("should display token on the square only when it is empty",()=>{
   render(<App/>);
   const square=screen.getAllByRole("button");
   fireEvent.click(square[0]);
