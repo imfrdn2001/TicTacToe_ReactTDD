@@ -42,18 +42,18 @@ describe("App rendering and functionality",()=>{
     expect(Square[0].textContent).toBe("X");
     fireEvent.click(Square[1]);
     expect(Square[1].textContent).toBe("O");
-});
+  });
 
-test("should display token on the squae only when it is empty",()=>{
+  test("should display token on the squae only when it is empty",()=>{
   render(<App/>);
   const square=screen.getAllByRole("button");
   fireEvent.click(square[0]);
   expect(square[0].textContent).toBe("X");
   fireEvent.click(square[0]);
   expect(square[0].textContent).toBe("X");
-});
+  });
 
-test("should be able to calculate winner",()=>{
+  test("should be able to calculate winner",()=>{
   render(<App/>);
   const squares=screen.getAllByRole("button");
   const status=screen.getByTestId("status");
@@ -64,6 +64,6 @@ test("should be able to calculate winner",()=>{
   fireEvent.click(squares[6]);
   fireEvent.click(squares[7]);
   expect(status.textContent).toBe("winner: X");
-});
+  });
 
 });
